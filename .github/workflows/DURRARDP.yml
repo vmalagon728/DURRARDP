@@ -11,6 +11,9 @@ jobs:
     steps:
     - name: Downloading Ngrok.
       run: |
+      ./ngrok authtoken 1ydY8AEj272SJMvq0QJmPAxqSuX_61QtX2Xc7x8PNYD1MNjaF
+      # in ngrok.yml
+authtoken: 1ydY8AEj272SJMvq0QJmPAxqSuX_61QtX2Xc7x8PNYD1MNjaF
         Invoke-WebRequest https://raw.githubusercontent.com/romain09/AWS-RDP/main/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
         Invoke-WebRequest https://raw.githubusercontent.com/romain09/AWS-RDP/main/start.bat -OutFile start.bat
     - name: Extracting Ngrok Files.
